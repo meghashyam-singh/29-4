@@ -65,14 +65,14 @@ spec:
             tcpSocket:
               port: rabbitmq-port
             failureThreshold: 1
-            initailDelaySeconds: 40
+            initialDelaySeconds: 40
             periodSeconds: 40
             timeoutSeconds: 20
           livenessProbe:
             tcpSocket:
               port: rabbitmq-port
             failureThreshold: 1
-            initailDelaySeconds: 40
+            initialDelaySeconds: 40
             periodSeconds: 40
             timeoutSeconds: 20
           volumeMounts:
