@@ -33,9 +33,10 @@ spec:
   serviceName: rabbitmq-headless-service
   replicas: 1
   selector:
-    project: roboshop
-    tier: db
-    component: rabbitmq
+    matchLabels:
+      project: roboshop
+      tier: db
+      component: rabbitmq
   template:
     metadata:
       labels:
