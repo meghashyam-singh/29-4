@@ -21,7 +21,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       project: roboshop
       tier: backend
       component: catalogue
@@ -112,7 +112,7 @@ kind: ServiceAccount
 metadata:
   name: catalogue-service-account
   namespace: roboshop
-  lables:
+  labels:
     project: roboshop
     tier: backend
     component: catalogue
