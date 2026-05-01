@@ -12,7 +12,7 @@ def call(Map configMap) {
             APPVERSION = ""
             COMPONENT = "${configMap.COMPONENT}"
             BRANCH = "${configMap.BRANCH}"
-            GIT-URL = "${configMap.GIT_URL}"
+            GIT_URL = "${configMap.GIT_URL}"
             }
         options {
             timeout(time:15, unit: 'MINUTES')
