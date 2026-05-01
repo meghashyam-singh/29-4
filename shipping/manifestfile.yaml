@@ -36,7 +36,7 @@ spec:
       containers:
         - name: shipping-cont
           image: meghashyam792/roboshop
-          imagePullPolciy: Always
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               name: shipping-port
