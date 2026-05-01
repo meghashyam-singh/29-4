@@ -3,7 +3,7 @@
 def configMap = [
     GIT_URL: "https://github.com/meghashyam-singh/29-4.git",
     BRANCH: "main",
-    COMPONENT: "user"
+    COMPONENT: "cart"
 ]
 
 deploymentPipeline(configMap)
