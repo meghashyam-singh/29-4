@@ -35,7 +35,7 @@ spec:
       serviceAccountName: shipping-service-account
       containers:
         - name: shipping-cont
-          image: meghashyam792/roboshop
+          image: meghashyam792/roboshop:shipping
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
