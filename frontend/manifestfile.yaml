@@ -139,7 +139,7 @@ metadata:
   name: frontend-service
   namespace: roboshop
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     project: roboshop
     tier: frontend
