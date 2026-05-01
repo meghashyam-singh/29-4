@@ -52,16 +52,16 @@ spec:
               path: /heath
               port: shipping-port
             failureThreshold: 2
-            initialDelaySeconds: 50
-            periodSeconds: 50
+            initialDelaySeconds: 80
+            periodSeconds: 80
             timeoutSeconds: 15
           livenessProbe:
             httpGet: 
               path: /heath
               port: shipping-port
             failureThreshold: 2
-            initialDelaySeconds: 50
-            periodSeconds: 50
+            initialDelaySeconds: 80
+            periodSeconds: 80
             timeoutSeconds: 15
           envFrom:
             - configMapRef:
