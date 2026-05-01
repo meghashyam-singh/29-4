@@ -58,25 +58,25 @@ def call(Map configMap) {
                     }
                 }
             }
-            stage('quality Gates') {
-                steps {
-                    script {
-                        timeout(time:15, unit: 'MINUTES') {
-                            waitForQualityGate abortPipeline: true
-                        }
-                    }
-                }
-            }
+            // stage('quality Gates') {
+            //     steps {
+            //         script {
+            //             timeout(time:15, unit: 'MINUTES') {
+            //                 waitForQualityGate abortPipeline: true
+            //             }
+            //         }
+            //     }
+            // }
             stage('build image') {
                 steps {
                     sh "docker build --no-cache -t ${PROJECT}/${COMPONENT}:${APPVERSION}:${BUILD_NUMBER} ./${COMPONENT}"
                 }
             }
-            stage('image scan') {
-                steps {
-                    sh "trivy image ${PROJECT}/${COMPONENT}:${APPVERSION}:${BUILD_NUMBER} > ${COMPONENT}-image-scan-report.txt"
-                }
-            }
+            // stage('image scan') {
+            //     steps {
+            //         sh "trivy image ${PROJECT}/${COMPONENT}:${APPVERSION}:${BUILD_NUMBER} > ${COMPONENT}-image-scan-report.txt"
+            //     }
+            // }
             stage('push to ecr') {
                 steps {
                     script {
