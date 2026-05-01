@@ -42,7 +42,7 @@ def call(Map configMap) {
             stage('build') {
                 steps {
                     dir("${COMPONENT}") {
-                        sh "pip3 install -r requirements.ext"
+                        sh "pip3 install -r requirements.txt"
                     }
                 }
             }
