@@ -9,7 +9,7 @@ def call(Map configMap) {
             REGION = "us-east-1"
             ACCOUNT_ID = "515138251473"
             PROJECT = "roboshop"
-            APPVERSION = ""
+            APPVERSION = ''
             COMPONENT = "${configMap.COMPONENT}"
             BRANCH = "${configMap.BRANCH}"
             GIT_URL = "${configMap.GIT_URL}"
@@ -33,7 +33,7 @@ def call(Map configMap) {
                 steps {
                     dir("${COMPONENT}") {
                         script {
-                            def APPVERSION = readFile('version.txt').trim()
+                            APPVERSION = readFile('version.txt').trim()
                             echo "APPVERSION IS: ${APPVERSION}"
                         }
                     }
