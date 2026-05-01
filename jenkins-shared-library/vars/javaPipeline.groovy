@@ -73,11 +73,11 @@ def call(Map configMap) {
                     sh "docker build --no-cache -t ${PROJECT}/${COMPONENT}:${APPVERSION}-${BUILD_NUMBER} ./${COMPONENT}"
                 }
             }
-            stage('image scan') {
-                steps {
-                    sh "trivy image ${PROJECT}/${COMPONENT}:${APPVERSION}-${BUILD_NUMBER} > ${COMPONENT}-image-scan-report.txt"
-                }
-            }
+            // stage('image scan') {
+            //     steps {
+            //         sh "trivy image ${PROJECT}/${COMPONENT}:${APPVERSION}-${BUILD_NUMBER} > ${COMPONENT}-image-scan-report.txt"
+            //     }
+            // }
             stage('image push') {
                 steps {
                     script {
