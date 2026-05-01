@@ -92,7 +92,7 @@ def call(Map configMap) {
             }
             stage('trigger cd job') {
                 steps {
-                    build job: "${COMPONENT}-cd-job",
+                    build job: "${COMPONENT}-cd-pipeline",
                     propagate: false,
                     wait: false
                 }
