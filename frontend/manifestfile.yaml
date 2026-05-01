@@ -112,7 +112,7 @@ spec:
               path: /
               port: frontend-port
             failureThreshold: 2
-            initialDelaySeconds: 5-
+            initialDelaySeconds: 50
             periodSeconds: 50
             timeoutSeconds: 15
           livenessProbe: 
@@ -120,7 +120,7 @@ spec:
               path: /
               port: frontend-port
             failureThreshold: 2
-            initialDelaySeconds: 5-
+            initialDelaySeconds: 50
             periodSeconds: 50
             timeoutSeconds: 15
           volumeMounts:
