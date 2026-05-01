@@ -33,7 +33,7 @@ spec:
         component: shipping
     spec:
       serviceAccountName: shipping-service-account
-      conatiners:
+      containers:
         - name: shipping-cont
           image: meghashyam792/roboshop
           imagePullPolciy: Always
