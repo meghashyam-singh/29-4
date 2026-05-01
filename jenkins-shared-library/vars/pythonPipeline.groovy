@@ -69,7 +69,7 @@ def call(Map configMap) {
             // }
             stage('build image') {
                 steps {
-                    sh "docker build --no-cache -t ${PROJECT}/${COMPONENT}:${APPVERSION}:${BUILD_NUMBER} ./${COMPONENT}"
+                    sh "docker build --no-cache -t ${PROJECT}/${COMPONENT}:${APPVERSION}-${BUILD_NUMBER} ./${COMPONENT}"
                 }
             }
             // stage('image scan') {
